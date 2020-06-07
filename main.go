@@ -25,7 +25,7 @@ func getPort() string {
 }
 
 func countString(w http.ResponseWriter, r *http.Request) {
-	S := Stringcount{}
+	S := stringcount{}
 	S.String = mux.Vars(r)["string"]
 	S.Numberofcharacters = len(S.String)
 	json.NewEncoder(w).Encode(S)
